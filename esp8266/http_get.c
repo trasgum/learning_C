@@ -135,7 +135,7 @@ void http_get_time(void *pvParameters)
         printf("Closing...");
         vPortFree(response);
         close(socket_fd);
-        response = NULL;
+        response[0] = '\0';
         printf("Closed...");
         vTaskDelay(4000 / portTICK_RATE_MS);
     }
